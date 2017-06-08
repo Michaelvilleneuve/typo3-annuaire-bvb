@@ -14,41 +14,21 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="main">
 <h1>Les contacts</h1>
-<style>
-	th { 
-	padding: 10px; }
-</style>
 <f:flashMessages />
 
-<table  class="tx_annuairebvb" >
-	<tr>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.nom" /></th>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.prenom" /></th>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.tel" /></th>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.email" /></th>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.adresse" /></th>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.code_postal" /></th>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.ville" /></th>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.photo" /></th>
-		<th><f:translate key="tx_annuairebvb_domain_model_contact.presentation" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
+<f:for each="{contacts}" as="contact">
+	<div class="col-xs-4">
+		<div class="well">
+			<h4>{contact.nom} {contact.prenom}</h4>
+			<hr>
+				{contact.email}
+			<hr>
+			<p>
+				{contact.presentation}
+			</p>
+		</div>
+	</div>
+</f:for>
 
-	<f:for each="{contacts}" as="contact">
-		<tr>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.nom}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.prenom}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.tel}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.email}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.adresse}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.codePostal}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.ville}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.photo.originalResource.name}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{contact : contact}"> {contact.presentation}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{contact : contact}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{contact : contact}">Delete</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
+
 </f:section>
