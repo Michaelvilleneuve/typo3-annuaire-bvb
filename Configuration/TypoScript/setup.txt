@@ -1,0 +1,67 @@
+
+plugin.tx_annuairebvb_bvb1 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_annuairebvb_bvb1.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_annuairebvb_bvb1.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_annuairebvb_bvb1.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_annuairebvb_bvb1.persistence.storagePid}
+	}
+}
+
+plugin.tx_annuairebvb_bvb2 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_annuairebvb_bvb2.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_annuairebvb_bvb2.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_annuairebvb_bvb2.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_annuairebvb_bvb2.persistence.storagePid}
+	}
+}
+
+plugin.tx_annuairebvb_bvb3 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_annuairebvb_bvb3.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_annuairebvb_bvb3.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_annuairebvb_bvb3.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_annuairebvb_bvb3.persistence.storagePid}
+	}
+}
+
+plugin.tx_annuairebvb._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-annuaire-bvb table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-annuaire-bvb table th {
+		font-weight:bold;
+	}
+
+	.tx-annuaire-bvb table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)

@@ -1,0 +1,45 @@
+
+plugin.tx_annuairebvb_bvb1 {
+	view {
+		# cat=plugin.tx_annuairebvb_bvb1/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:annuaire_bvb/Resources/Private/Templates/
+		# cat=plugin.tx_annuairebvb_bvb1/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:annuaire_bvb/Resources/Private/Partials/
+		# cat=plugin.tx_annuairebvb_bvb1/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:annuaire_bvb/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_annuairebvb_bvb1//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_annuairebvb_bvb2 {
+	view {
+		# cat=plugin.tx_annuairebvb_bvb2/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:annuaire_bvb/Resources/Private/Templates/
+		# cat=plugin.tx_annuairebvb_bvb2/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:annuaire_bvb/Resources/Private/Partials/
+		# cat=plugin.tx_annuairebvb_bvb2/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:annuaire_bvb/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_annuairebvb_bvb2//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_annuairebvb_bvb3 {
+	view {
+		# cat=plugin.tx_annuairebvb_bvb3/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:annuaire_bvb/Resources/Private/Templates/
+		# cat=plugin.tx_annuairebvb_bvb3/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:annuaire_bvb/Resources/Private/Partials/
+		# cat=plugin.tx_annuairebvb_bvb3/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:annuaire_bvb/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_annuairebvb_bvb3//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
