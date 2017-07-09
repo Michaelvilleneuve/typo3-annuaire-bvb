@@ -13,6 +13,13 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
+<form action="{page.uid}" method="GET">
+	<div class="form-group">
+		<input class="form-control" name="search">
+	</div>
+	<button class="btn btn-primary" type="submit">Rechercher</button>
+</form>
+<hr>
 <h1>Les organismes de BVB</h1>
 <hr>
 <f:flashMessages />

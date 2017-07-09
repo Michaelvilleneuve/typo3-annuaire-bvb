@@ -41,4 +41,14 @@ class ContactRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
     );
 
+	/**
+ 		* @param string $search
+ 		* @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+ 	*/
+ 	public function search($search) {
+ 		$query = $this->createQuery();
+ 		$query->matching($query->like('prenom', '%'.$search.'%'));
+ 		return $query->execute();
+ 	}
+
 }

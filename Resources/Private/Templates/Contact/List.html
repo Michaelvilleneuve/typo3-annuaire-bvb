@@ -12,23 +12,38 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
+
 <f:section name="main">
+ <f:form pluginName="pi1" controller="Contact" action="list" name="search" object="{search}" objectName="search">
+	<div class="form-group">
+		<f:form.textfield property="terms" name="terms" placeholder="Recherche par prénom" class="form-control"/>
+	</div>
+	<button class="btn btn-primary" type="submit">Rechercher</button>
+</f:form>
+<hr>
 <h1>Les contacts</h1>
 <f:flashMessages />
 
-<f:for each="{contacts}" as="contact">
-	<div class="col-xs-4">
-		<div class="well">
-			<h4>{contact.nom} {contact.prenom}</h4>
-			<hr>
-				{contact.email}
-			<hr>
-			<p>
-				{contact.presentation}
-			</p>
-		</div>
-	</div>
-</f:for>
+<f:if condition="{contacts}">
+	<f:then>
+		<f:for each="{contacts}" as="contact">
+			<div class="col-xs-4">
+				<div class="well">
+					<h4>{contact.nom} {contact.prenom}</h4>
+					<hr>
+						{contact.email}
+					<hr>
+					<p>
+						{contact.presentation}
+					</p>
+				</div>
+			</div>
+		</f:for>
+	</f:then>
+    <f:else>
+    	<p>Aucun contact trouvé </p>
+    </f:else>
+</f:if>
 
 
 </f:section>

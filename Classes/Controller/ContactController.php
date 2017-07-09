@@ -49,7 +49,7 @@ class ContactController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function listAction()
     {
-        $contacts = $this->contactRepository->findAll();
+        $contacts = $_POST['tx_annuairebvb_pi1']['search'] ? $this->contactRepository->search($_POST['tx_annuairebvb_pi1']['search']['terms']) : $this->contactRepository->findAll();
         $this->view->assign('contacts', $contacts);
     }
     
